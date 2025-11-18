@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutritionist Website</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 border-bottom">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand brand-logo" href="index.html">Nutritionist</a>
+        <button
+          class="navbar-toggler d-block"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebarMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bmi.html">BMI Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calorie.html">Calorie Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Nutritionist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="success.html">Success Stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing Plans</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section
+      id="hero"
+      class="hero-section d-flex align-items-center text-center py-5"
+    >
+      <div class="container">
+        <h1 class="display-4 fw-bold">Transform Your Health</h1>
+        <p class="lead mt-3">
+          Personalized nutrition guidance for a healthier you.
+        </p>
+        <img
+          src="assets/images/hero.jpeg"
+          class="img-fluid mt-4 fake-img"
+          alt="Hero Image"
+        />
+      </div>
+    </section>
+
+    <!-- CIRCLE INTRO -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <div class="circle-intro">
+          <p>Meet Your Nutritionist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGO SLIDER -->
+    <section class="py-5">
+      <div class="container overflow-hidden">
+        <div class="logo-track">
+          <img src="assets/images/logo1.jpeg" class="logo-item" alt="logo" />
+          <img src="assets/images/logo2.jpeg" class="logo-item" alt="logo" />
+          <img src="assets/images/logo3.jpeg" class="logo-item" alt="logo" />
+          <img src="assets/images/logo4.jpeg" class="logo-item" alt="logo" />
+          <img src="assets/images/logo1.jpeg" class="logo-item" alt="logo" />
+          <img src="assets/images/logo2.jpeg" class="logo-item" alt="logo" />
+        </div>
+      </div>
+    </section>
+    <!-- IMAGE SECTION -->
+    <section class="py-5">
+      <div class="container text-center">
+        <img
+          src="assets/images/pic1.jpeg"
+          class="img-fluid rounded fake-img mb-4"
+          alt="pic"
+        />
+        <img
+          src="assets/images/pic2.jpeg"
+          class="img-fluid rounded fake-img"
+          alt="pic"
+        />
+      </div>
+    </section>
+
+    <!-- TABS SECTION -->
+    <section class="py-5" id="services">
+      <div class="container">
+        <ul class="nav nav-tabs mb-4" id="servicesTab">
+          <li class="nav-item">
+            <button
+              class="nav-link active"
+              data-bs-toggle="tab"
+              data-bs-target="#indiv"
+            >
+              Care for Individuals
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#org">
+              Services for Organizations
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="indiv">
+            <p>
+              Individual wellness programs, personalized guidance, meal
+              planning, and more.
+            </p>
+          </div>
+          <div class="tab-pane fade" id="org">
+            <p>
+              Corporate wellness programs, workshops, and health consultations
+              for organizations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5 text-center">
+      <div class="container">
+        <h2 class="mb-3">Book an Appointment</h2>
+        <p class="mb-4">Contact us to start your wellness journey.</p>
+        <a href="#" class="btn btn-terracotta btn-lg">Contact Now</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#q1"
+              >
+                Do you offer online sessions?
+              </button>
+            </h2>
+            <div
+              id="q1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Yes, we offer online consultation sessions for your convenience.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#q2"
+              >
+                Do you make customized diet plans?
+              </button>
+            </h2>
+            <div
+              id="q2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Absolutely! Every plan is personalized based on your goals and
+                health condition.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <h2 class="mb-4">Subscribe</h2>
+        <form class="mx-auto" style="max-width: 500px">
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Your Name"
+          />
+          <input
+            type="email"
+            class="form-control mb-3"
+            placeholder="Your Email"
+          />
+          <label class="form-label mb-2">I'm interested in:</label><br />
+          <input type="checkbox" /> Weight loss<br />
+          <input type="checkbox" /> General wellness<br />
+          <input type="checkbox" /> Corporate programs<br /><br />
+          <button type="submit" class="btn btn-terracotta w-100">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

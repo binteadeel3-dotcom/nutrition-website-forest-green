@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <style>
+    .form-label::checkbox {
+      color: var(--cream);
+      opacity: 1; /* ensures full opacity */
+    }
+  </style>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand brand-logo" href="index.html">Nutritionist</a>
+        <button
+          class="navbar-toggler d-block"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebarMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="bmi.html">BMI Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calorie.html">Calorie Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Nutritionist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="success.html">Success Stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing Plans</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PAGE TITLE -->
+    <section class="text-center py-5">
+      <div class="container">
+        <h1 class="fw-bold">BMI Calculator</h1>
+        <p class="lead">Calculate your Body Mass Index easily.</p>
+      </div>
+    </section>
+
+    <!-- BMI CALCULATOR -->
+    <section class="container py-4">
+      <div
+        class="card p-4 mx-auto shadow-sm"
+        style="
+          max-width: 500px;
+          background-color: var(--forest);
+          border: 1px solid var(--cream);
+        "
+      >
+        <h3 class="text-center fw-bold mb-3 text-cream">Enter Your Details</h3>
+
+        <label class="form-label mt-2 fw-semibold">Weight (kg)</label>
+        <input
+          type="number"
+          class="form-control text-cream"
+          id="bmiWeight"
+          placeholder="e.g. 60"
+        />
+
+        <label class="form-label mt-3 fw-semibold">Height (cm)</label>
+        <input
+          type="number"
+          class="form-control text-cream"
+          id="bmiHeight"
+          placeholder="e.g. 170"
+        />
+
+        <button class="btn btn-terracotta w-100 mt-4" onclick="calculateBMI()">
+          Calculate BMI
+        </button>
+
+        <div class="text-center mt-4 text-cream">
+          <h4 id="bmiResult"></h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="py-5 text-center bg-forest text-cream">
+      <div class="container">
+        <h2 class="fw-bold mb-2">Book an Appointment</h2>
+        <p>Start your wellness journey today!</p>
+        <a href="#" class="btn btn-terracotta btn-lg">Contact Now</a>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <h2 class="mb-4 text-cream">Subscribe</h2>
+        <form class="mx-auto" style="max-width: 500px">
+          <input
+            type="text"
+            class="form-control mb-3 text-cream"
+            placeholder="Your Name"
+          />
+          <input
+            type="email"
+            class="form-control mb-3 text-cream"
+            placeholder="Your Email"
+          />
+
+          <label class="form-label fw-semibold mb-2 text-cream"
+            >I'm interested in:</label
+          ><br />
+          <input type="checkbox" class="mb-1" /> Weight loss<br />
+          <input type="checkbox" class="mb-1" /> General wellness<br />
+          <input type="checkbox" class="mb-3" /> Corporate programs<br />
+
+          <button type="submit" class="btn btn-terracotta w-100">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+      function calculateBMI() {
+        const w = document.getElementById("bmiWeight").value;
+        const h = document.getElementById("bmiHeight").value;
+        if (!w || !h) {
+          document.getElementById("bmiResult").innerText =
+            "Please enter weight and height.";
+          return;
+        }
+        const hM = h / 100;
+        const bmi = (w / (hM * hM)).toFixed(1);
+        let status = "";
+        if (bmi < 18.5) status = "Underweight";
+        else if (bmi < 24.9) status = "Healthy";
+        else if (bmi < 29.9) status = "Overweight";
+        else status = "Obese";
+        document.getElementById(
+          "bmiResult"
+        ).innerText = `BMI: ${bmi} (${status})`;
+      }
+    </script>
+  </body>
+</html>

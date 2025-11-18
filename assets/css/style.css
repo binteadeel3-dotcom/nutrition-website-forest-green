@@ -1,0 +1,233 @@
+/* 🌲 Forest Green Theme */
+:root {
+  --forest: #2e5339;
+  --cream: #faf7f0;
+  --terracotta: #c1694f;
+  --terracotta-dark: #a4553f;
+}
+
+/* ================= GLOBAL ================= */
+body {
+  background-color: var(--forest);
+  color: var(--cream);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--cream);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background-color: var(--forest) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.brand-logo {
+  color: var(--cream) !important;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ================= SIDEBAR ================= */
+.offcanvas {
+  background-color: var(--forest);
+}
+.offcanvas .nav-link {
+  color: var(--cream);
+  font-size: 1.1rem;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link.active {
+  color: var(--terracotta) !important;
+}
+
+/* ================= HERO / SECTION ================= */
+.hero-section,
+.bg-forest {
+  background-color: var(--forest);
+  color: var(--cream);
+}
+.section-card {
+  background-color: #3e694f;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--cream);
+  color: var(--cream);
+}
+
+/* ================= CARDS ================= */
+.card {
+  background-color: #3e694f;
+  color: var(--cream);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--cream);
+}
+.card h5,
+.card p {
+  color: var(--cream);
+}
+
+/* ================= CIRCLE INTRO ================= */
+.circle-intro {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--terracotta);
+  color: var(--cream);
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= LOGO SLIDER ================= */
+.logo-track {
+  display: flex;
+  gap: 50px;
+  white-space: nowrap;
+  animation: slideLeft 16s linear infinite;
+}
+.logo-item {
+  height: 60px;
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ================= BUTTONS ================= */
+.btn-terracotta {
+  background-color: var(--terracotta);
+  color: var(--cream);
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 26px;
+  transition: 0.3s;
+}
+.btn-terracotta:hover {
+  background-color: var(--terracotta-dark);
+}
+.btn-terracotta.w-100 {
+  width: 100%;
+}
+
+/* ================= TABS ================= */
+.nav-tabs .nav-link.active {
+  background-color: var(--cream);
+  color: var(--forest) !important;
+  border-radius: 6px 6px 0 0;
+  font-weight: 600;
+}
+.nav-tabs .nav-link {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+/* ================= ACCORDION ================= */
+.accordion-button {
+  background-color: var(--forest);
+  color: var(--cream);
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--terracotta);
+  color: var(--cream);
+}
+.accordion-body {
+  background-color: var(--forest);
+  color: var(--cream);
+}
+
+/* ================= FORM ================= */
+.form-control {
+  background-color: var(--forest);
+  color: var(--cream);
+  border: 1px solid var(--cream);
+}
+.form-control:focus {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 0.2rem rgba(193, 105, 79, 0.25);
+}
+.form-label {
+  color: var(--cream);
+}
+.form-control::placeholder {
+  color: var(--cream);
+  opacity: 1;
+}
+
+/* ================= CONTACT & SUBSCRIBE ================= */
+.contact-section,
+.subscribe-section {
+  background-color: #3e694f;
+  padding: 50px 0;
+  text-align: center;
+  border-top: 1px solid var(--cream);
+}
+.contact-section .btn,
+.subscribe-section .btn {
+  font-size: 1rem;
+}
+.subscribe-section input[type="text"],
+.subscribe-section input[type="email"] {
+  background-color: var(--forest);
+  color: var(--cream);
+  border: 1px solid var(--cream);
+  margin-bottom: 15px;
+}
+.subscribe-section label {
+  color: var(--cream);
+}
+
+/* ================= IMAGE ================= */
+.fake-img {
+  max-height: 450px; /* restores original size */
+  width: auto; /* natural width */
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+img.rounded-circle {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 3px solid var(--cream);
+}
+
+/* keep all images responsive but don't stretch */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================= MISC ================= */
+hr {
+  border-color: var(--cream);
+}
+.text-cream {
+  color: var(--cream) !important;
+}
+.bg-forest {
+  background-color: var(--forest) !important;
+}

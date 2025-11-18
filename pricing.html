@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Plans | Nutritionist</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body class="bg-forest text-cream">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 border-bottom">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand brand-logo" href="index.html">Nutritionist</a>
+        <button
+          class="navbar-toggler d-block"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebarMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR MENU -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-cream" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-cream" href="bmi.html">BMI Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-cream" href="calorie.html"
+              >Calorie Calculator</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-cream" href="about.html"
+              >About Nutritionist</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-cream" href="success.html"
+              >Success Stories</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-terracotta" href="pricing.html"
+              >Pricing Plans</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <section class="container py-5">
+      <h1 class="text-center mb-4">Pricing Plans</h1>
+      <p class="text-center mb-5">
+        Choose a plan that suits your goals and lifestyle.
+      </p>
+
+      <div class="row g-4">
+        <!-- Basic Plan -->
+        <div class="col-md-4">
+          <div class="card shadow-sm text-cream">
+            <div class="card-body">
+              <h5 class="card-title">Basic Plan</h5>
+              <p class="small">
+                Suitable for beginners. Includes general meal guidance.
+              </p>
+              <p class="fw-bold">$49 / month</p>
+              <a href="#" class="btn btn-terracotta w-100">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="col-md-4">
+          <div class="card shadow-sm text-cream">
+            <div class="card-body">
+              <h5 class="card-title">Standard Plan</h5>
+              <p class="small">
+                Includes personalized meal plan and weekly check-ins.
+              </p>
+              <p class="fw-bold">$99 / month</p>
+              <a href="#" class="btn btn-terracotta w-100">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="col-md-4">
+          <div class="card shadow-sm text-cream">
+            <div class="card-body">
+              <h5 class="card-title">Premium Plan</h5>
+              <p class="small">
+                Full access: personalized plan, coaching, and support anytime.
+              </p>
+              <p class="fw-bold">$149 / month</p>
+              <a href="#" class="btn btn-terracotta w-100">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="py-5 text-center bg-forest">
+      <h2 class="fw-bold mb-2">Book an Appointment</h2>
+      <p>Start your wellness journey today!</p>
+      <a href="#" class="btn btn-terracotta btn-lg">Contact Now</a>
+    </section>
+
+    <!-- SUBSCRIBE SECTION -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <h2 class="mb-4">Subscribe</h2>
+        <form class="mx-auto" style="max-width: 500px">
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Your Name"
+          />
+          <input
+            type="email"
+            class="form-control mb-3"
+            placeholder="Your Email"
+          />
+          <label class="form-label fw-semibold">I'm interested in:</label><br />
+          <input type="checkbox" /> Weight loss <br />
+          <input type="checkbox" /> General wellness <br />
+          <input type="checkbox" /> Corporate programs <br /><br />
+          <button type="submit" class="btn btn-terracotta w-100">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
